@@ -1,7 +1,6 @@
-# SQL-Problems-Solution
+# SQL Problems Solution
 <!---LeetCode Topics Start-->
-# LeetCode Topics
-## Database
+## Problems & Solutions
 |  |
 | ------- |
 | [0584-find-customer-referee](https://github.com/keshavpotewar/SQL-Problems-Solution/tree/master/0584-find-customer-referee) |
