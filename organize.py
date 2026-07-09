@@ -1,7 +1,7 @@
 import shutil
 from pathlib import Path
 
-ROOT = Path(__file__).parent   
+ROOT = Path(__file__).parent
 
 LANGUAGE_MAP = {
     ".py": "Python",
@@ -37,12 +37,10 @@ IGNORE = {
 
 count = 0
 
-# Make a copy of the folder list because we'll be moving folders
 folders = [f for f in ROOT.iterdir() if f.is_dir()]
 
 for problem_folder in folders:
 
-    # Skip language folders if script is run again
     if problem_folder.name in LANGUAGE_MAP.values():
         continue
 
@@ -70,14 +68,56 @@ for problem_folder in folders:
 
     destination = language_folder / problem_folder.name
 
-    # Skip if already moved
     if destination.exists():
         print(f"Already exists: {problem_folder.name}")
         continue
 
     shutil.move(str(problem_folder), str(destination))
-
     print(f"Moved: {problem_folder.name} -> {language}")
     count += 1
 
-print(f"\nDone! {count} folders moved.")
+
+# -------------------------------
+# Update README links
+# -------------------------------
+
+readme = ROOT / "README.md"
+
+if readme.exists():
+
+    text = readme.read_text(encoding="utf-8")
+
+    folder_map = {}
+
+    # Build mapping from existing folders
+    for language in LANGUAGE_MAP.values():
+
+        language_path = ROOT / language
+
+        if not language_path.exists():
+            continue
+
+        for folder in language_path.iterdir():
+
+            if folder.is_dir():
+                folder_map[folder.name] = f"{language}/{folder.name}"
+
+    # Replace links
+    for old_folder, new_folder in folder_map.items():
+
+        text = text.replace(
+            f"](./{old_folder}/)",
+            f"](./{new_folder}/)"
+        )
+
+        text = text.replace(
+            f"](./{old_folder})",
+            f"](./{new_folder})"
+        )
+
+        text = text.replace(
+            f"href=\"./{old_folder}/\"",
+            f"href=\"./{new_folder}/\""
+        )
+
+    readme.write_text(text, encoding="utf-8")
