@@ -77,10 +77,6 @@ for problem_folder in folders:
     count += 1
 
 
-# -------------------------------
-# Update README links
-# -------------------------------
-
 readme = ROOT / "README.md"
 
 if readme.exists():
@@ -89,7 +85,6 @@ if readme.exists():
 
     folder_map = {}
 
-    # Build mapping from existing folders
     for language in LANGUAGE_MAP.values():
 
         language_path = ROOT / language
@@ -102,7 +97,7 @@ if readme.exists():
             if folder.is_dir():
                 folder_map[folder.name] = f"{language}/{folder.name}"
 
-    # Replace links
+
     for old_folder, new_folder in folder_map.items():
 
         text = text.replace(
@@ -121,3 +116,6 @@ if readme.exists():
         )
 
     readme.write_text(text, encoding="utf-8")
+    print("README links updated.")
+
+print(f"\nDone! {count} folders moved.")
