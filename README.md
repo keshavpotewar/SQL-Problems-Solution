@@ -4,11 +4,11 @@
 ## Database
 | Problem Name | Difficulty |
 | ------- | ------- |
-| [0584-find-customer-referee](https://github.com/keshavpotewar/SQL-Problems-Solution/tree/master/0584-find-customer-referee) |
-| [0595-big-countries](https://github.com/keshavpotewar/SQL-Problems-Solution/tree/master/0595-big-countries) |
-| [0620-not-boring-movies](https://github.com/keshavpotewar/SQL-Problems-Solution/tree/master/0620-not-boring-movies) |
-| [1148-article-views-i](https://github.com/keshavpotewar/SQL-Problems-Solution/tree/master/1148-article-views-i) |
-| [1683-invalid-tweets](https://github.com/keshavpotewar/SQL-Problems-Solution/tree/master/1683-invalid-tweets) |
+| [0584-find-customer-referee](https://github.com/keshavpotewar/SQL-Problems-Solution/tree/main/SQL/0584-find-customer-referee) |
+| [0595-big-countries](https://github.com/keshavpotewar/SQL-Problems-Solution/tree/main/SQL/0595-big-countries) |
+| [0620-not-boring-movies](https://github.com/keshavpotewar/SQL-Problems-Solution/tree/main/SQL/0620-not-boring-movies) |
+| [1148-article-views-i](https://github.com/keshavpotewar/SQL-Problems-Solution/tree/main/SQL/1148-article-views-i) |
+| [1683-invalid-tweets](https://github.com/keshavpotewar/SQL-Problems-Solution/tree/main/SQL/1683-invalid-tweets) |
 | [1729-find-followers-count](https://github.com/keshavpotewar/LeetCode/tree/main/SQL/1729-find-followers-count/) | Easy |
 | [2356-number-of-unique-subjects-taught-by-each-teacher](https://github.com/keshavpotewar/LeetCode/tree/main/SQL/2356-number-of-unique-subjects-taught-by-each-teacher/) | Easy |
 ## Two Pointers
